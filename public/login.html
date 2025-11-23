@@ -4,90 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
+
     <style>
+        /* ===== GLOBAL STYLE ===== */
         body {
+            margin: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298); 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #e8ecf4; /* Light background */
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
         }
-        .login-container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            width: 320px;
-            text-align: center;
-        }
-        h1 {
-            color: #2c3e50; /* Dark header color */
-            margin-bottom: 30px;
-            font-size: 1.8em;
-        }
-        label {
-            display: block;
-            text-align: left;
-            margin-bottom: 5px;
-            font-weight: 600;
-            color: #555;
-        }
-        input {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box; 
-            transition: border-color 0.3s;
-        }
-        input:focus {
-            border-color: #3498db; /* Blue focus */
-            outline: none;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #3498db; /* Blue button */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-        #messageOut {
-            margin-top: 20px;
-            color: #e74c3c; /* Red for errors/messages */
-            white-space: pre-wrap; /* Mempertahankan format pre */
-            text-align: left;
-            font-size: 0.9em;
-        }
+
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <h1>Admin Login</h1>
-        
+
         <form id="loginForm">
-            <label for="username">Username:</label>
-            <input id="username" type="text" required>
-            
-            <label for="password">Password:</label>
-            <input id="password" type="password" required>
-            
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="Enter username" required>
+
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter password" required>
+
             <button type="submit">Login</button>
         </form>
-        
-        <pre id="messageOut"></pre> 
+
+        <pre id="messageOut"></pre>
     </div>
-    
+
     <script src="/public/login.js"></script>
 </body>
 </html>
